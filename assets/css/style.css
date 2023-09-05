@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary-color: #606952;
+  --secondary-color: #e1e1e1;
+  --terciary-color: #6c63ff;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);;
+}
+
+/* Lado esquerdo da landing page */
+.img-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+}
+.img-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-title {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 1rem;
+}
+.img-subtitle {
+  margin-top: -1rem;
+  color: var(--primary-color);
+  font-size: .75rem;
+}
+img {
+  width: 25rem;
+}
+
+/* Lado direito da landing page */
+.form-group {
+  width: 50%;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.form-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: left;
+  padding-left: 1rem;
+}
+.form-header h1::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-size: .75rem;
+  font-weight: bold;
+}
+.input-box input {
+  margin: .3rem 0;
+  padding: .7rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 5px #0000005a;
+}
+.input-box input:hover{
+  background-color: #f5faf8;
+}
+.input-box input:focus-visible {
+  outline: 1px solid var(--primary-color);
+}
+.input-box input::placeholder {
+  color: #000000be;
+}
+.gender-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  padding: 0 .5rem;
+}
+.gender-title {
+  font-size: .75rem;
+  font-weight: bold;
+}
+.gender {
+  display: flex;
+  justify-content: center;
+}
+.gender input {
+  margin-right: .35rem;
+}
+.gender label {
+  font-size: .9rem;
+  font-weight: 500;
+  color:#000000be;
+}
+.jewerly-title {
+  margin-top: 1rem;
+  font-size: .75rem;
+  font-weight: bold;
+}
+.jewerly-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  padding: 0 .5rem;
+}
+.jewerly label {
+  font-size: .9rem;
+  font-weight: 500;
+  color:#000000be;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+}
+.btn-group button {
+  width: 50%;
+  margin-top: 1.5rem;
+  background-color: var(--terciary-color);
+  padding: .5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.btn-group button:hover {
+  background-color: #7a74fc;
+}
+.btn-group a {
+  text-decoration: none;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 1330px) {
+  .container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .img-group {
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1064px) {
+  .container {
+    width: 80%;
+    height: auto;
+  }
+  .img-group img {
+    display: none;
+  }
+  .input-group {
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+  }
+  .gender-group {
+    margin-top: 2rem;
+  }
+  .gender {
+    margin-top: .5rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+  .input-group {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+  }
+  .gender-inputs {
+    justify-content: start;
+    flex-direction: column;
+  }
+  .jewerly-group {
+    flex-direction: column;
+  }
+  .btn-group {
+    justify-content: center;
+    width: 80%;
+  }
+}
